@@ -1,6 +1,6 @@
 package ru.itis;
 
-public class Main1 {
+public class Main {
 
     public static void showReverse(int array[]) {
         for (int i = array.length - 1; i >= 0; i--) {
