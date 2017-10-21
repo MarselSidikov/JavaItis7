@@ -15,6 +15,19 @@ public class Human {
     char sex;
     boolean isProgrammer;
 
+    // конструктор, написанный программистом - перегруженный конструктор
+    public Human(int age, double height, char sex, boolean isProgrammer) {
+        this.age = age;
+        this.height = height;
+        this.sex = sex;
+        this.isProgrammer = isProgrammer;
+    }
+
+    // перегруженный конструктор
+    public Human() {
+
+    }
+
     void olding(int years) {
         age = age + years;
     }

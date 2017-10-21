@@ -32,5 +32,7 @@ public class Main {
         human.age = 23;
         human.olding(3);
         System.out.println(human.age);
+
+        Human alex = new Human(32, 174, 'M', true);
     }
 }
