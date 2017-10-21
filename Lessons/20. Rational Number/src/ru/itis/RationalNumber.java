@@ -15,7 +15,9 @@ public class RationalNumber {
 
     // метод - процедура для сокращения дроби
     void optimize() {
-
+        int nod = runEuclidAlgorithm(numerator, denominator);
+        this.numerator = numerator / nod;
+        this.denominator = denominator / nod;
     }
 
     // выполняет поиск НОД двух чисел
