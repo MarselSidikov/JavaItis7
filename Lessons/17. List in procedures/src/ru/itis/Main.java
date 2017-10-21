@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     // глобальная переменная
-    public static int count = 0;
+    static int count = 0;
+    static int count2 = 0;
     // процедура добавления элемента
-    public static void addElement(int array[], int element) {
+    static void addElement(int array[], int element) {
         if (count < array.length) {
             // положил элемент в первую пустую
             array[count] = element;
@@ -15,7 +16,7 @@ public class Main {
             System.err.println("Нет места");
         }
     }
-    public static void deleteElement(int array[], int index){
+    static void deleteElement(int array[], int index){
         if (index < count) {
             for (int i = index; i < count; i++) {
                 array[i] = array[i + 1];
@@ -25,7 +26,7 @@ public class Main {
             System.err.println("Неверный индекс");
         }
     }
-    public static void printElements(int array[]) {
+    static void printElements(int array[]) {
         for (int i = 0; i < count; i++) {
             System.out.print(array[i] + " ");
         }
@@ -35,7 +36,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int elements[] = new int[10];
-
+        int elements2[] = new int[15];
         while (true) {
             System.out.println("МЕНЮ:");
             System.out.println("1. Добавить элемент");
