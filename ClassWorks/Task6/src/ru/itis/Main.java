@@ -1,5 +1,6 @@
 package ru.itis;
 
+import java.io.InputStream;
 import java.util.Scanner;
 
 public class Main {
@@ -54,5 +55,7 @@ public class Main {
 
         int x = parseNumber(number);
         System.out.println(x);
+
+        InputStream
     }
 }
