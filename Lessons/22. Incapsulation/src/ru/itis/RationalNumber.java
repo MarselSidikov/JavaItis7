@@ -9,10 +9,18 @@ package ru.itis;
  */
 public class RationalNumber {
     // числитель
-    int numerator;
+    private int numerator;
     // знаменатель
-    int denominator;
+    private int denominator;
 
+    public RationalNumber(int numerator, int denominator) {
+        this.numerator = numerator;
+        if (denominator != 0) {
+            this.denominator = denominator;
+        } else {
+            this.denominator = 1;
+        }
+    }
 
     // метод - процедура для сокращения дроби
     void optimize() {
@@ -41,4 +49,16 @@ public class RationalNumber {
         return a != 0 ? a : b;
     }
 
+    void showNumber() {
+        System.out.println(numerator
+                + "/" + denominator);
+    }
+
+    public int getNumerator() {
+        return numerator;
+    }
+
+    public int getDenominator() {
+        return denominator;
+    }
 }
