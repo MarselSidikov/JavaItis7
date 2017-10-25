@@ -19,4 +19,12 @@ public class TV {
         this.channels[count] = channel;
         count++;
     }
+
+    void switchChannel(int channelNumber) {
+        if (channels[channelNumber] == null) {
+            System.err.println("пшпшпшпшпшпшпшпшп");
+        } else {
+            channels[channelNumber].showCurrentProgram();
+        }
+    }
 }
