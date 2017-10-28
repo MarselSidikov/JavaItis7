@@ -1,5 +1,7 @@
 package ru.itis;
 
+import sun.security.provider.SHA;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -30,8 +32,12 @@ public class Main {
         for (int i = 0; i < 3; i++) {
             shapes[i].scale(0.95);
         }
-
+        box.getX();
         System.out.println(box.getHeight());
         System.out.println(sphere.getRadius());
+
+        Cylinder cylinder = new Cylinder(10, 10, 1, 5, 5);
+
+        // Shape3d shape3d = new Shape3d(3, 3, 3);
     }
 }

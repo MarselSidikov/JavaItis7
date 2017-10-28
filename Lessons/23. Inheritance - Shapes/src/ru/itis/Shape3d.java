@@ -7,7 +7,7 @@ package ru.itis;
  * @author Sidikov Marsel (First Software Engineering Platform)
  * @version v1.0
  */
-public class Shape3d {
+public abstract class Shape3d {
     // координаты центра
     protected double x;
     protected double y;
@@ -37,7 +37,5 @@ public class Shape3d {
         this.z = z;
     }
 
-    public void scale(double value) {
-        System.out.println("Не реализовано");
-    }
+    public abstract void scale(double value);
 }
