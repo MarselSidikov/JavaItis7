@@ -32,4 +32,8 @@ public class LinkedList<T> {
     public void add(T element) {
 
     }
+
+    public T get(int index) {
+        return null;
+    }
 }
