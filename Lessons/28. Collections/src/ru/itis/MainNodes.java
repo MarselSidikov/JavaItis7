@@ -1,6 +1,6 @@
 package ru.itis;
 
-public class Main {
+public class MainNodes {
 
     /**
      *
@@ -11,7 +11,10 @@ public class Main {
     public static void addElement(Node<String> a,
                                   Node<String> b,
                                   String element) {
-
+        Node<String> newNode = new Node<>();
+        newNode.element = element;
+        a.next = newNode;
+        newNode.next = b;
     }
     public static void main(String[] args) {
 	    Node<String> node1 = new Node<>();
@@ -33,6 +36,8 @@ public class Main {
 	    node2.next = node3;
 	    node3.next = node4;
 	    node4.next = node5;
+
+        addElement(node3, node4, "Марсель");
 
 	    Node<String> current = node1;
 
