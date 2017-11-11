@@ -11,6 +11,7 @@ public class LinkedList<T> {
 
     private Node<T> head;
     private Node<T> tail;
+    private int count = 0;
 
     public void addToBegin(T element) {
         // создаем новый узел
@@ -26,26 +27,40 @@ public class LinkedList<T> {
 
         newNode.next = head;
         this.head = newNode;
+        count++;
     }
 
-    // добавляет в конец
     public void add(T element) {
-
-
         Node<T> newNode = new Node<>();
         newNode.element = element;
 
         if (head == null) {
             head = newNode;
             tail = newNode;
+            count++;
             return;
         }
-        
         tail.next = newNode;
         tail = newNode;
+        count++;
     }
 
     public T get(int index) {
-        return null;
+
+        if (index >= 0 && index < count) {
+            int i = 0;
+            Node<T> current = head;
+            while (i < index) {
+                current = current.next;
+                i++;
+            }
+            return current.element;
+        } else {
+            return null;
+        }
+    }
+
+    public void remove(int index) {
+        
     }
 }

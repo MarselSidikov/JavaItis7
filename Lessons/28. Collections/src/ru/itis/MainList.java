@@ -10,10 +10,13 @@ package ru.itis;
 public class MainList {
     public static void main(String[] args) {
         LinkedList<String> list = new LinkedList<>();
-        list.addToBegin("Максим");
-        list.addToBegin("Ильгиз");
-        list.addToBegin("Артем");
-        list.addToBegin("Александр");
-        list.addToBegin("Денис");
+        list.add("Максим"); // 0
+        list.add("Ильгиз"); // 1
+        list.add("Артем"); // 2
+        list.add("Александр"); // 3
+        list.add("Денис"); // 4
+
+        String element = list.get(4);
+        System.out.println(element);
     }
 }
