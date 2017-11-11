@@ -31,6 +31,18 @@ public class LinkedList<T> {
     // добавляет в конец
     public void add(T element) {
 
+
+        Node<T> newNode = new Node<>();
+        newNode.element = element;
+
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+            return;
+        }
+        
+        tail.next = newNode;
+        tail = newNode;
     }
 
     public T get(int index) {
